@@ -1,3 +1,2 @@
 zsh/
-README.md
-install.sh
+.pre-commit-config.yaml
