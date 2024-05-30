@@ -1,0 +1,20 @@
+[".zinit"]
+refreshPeriod = "168h"
+type = "git-repo"
+url = "https://github.com/zdharma-continuum/zinit.git"
+
+[".zsh-hooks"]
+refreshPeriod = "168h"
+type = "git-repo"
+url = "https://github.com/zsh-hooks/zsh-hooks.git"
+
+[".config/alacritty/themes"]
+refreshPeriod = "168h"
+type = "git-repo"
+url = "https://github.com/alacritty/alacritty-theme.git"
+
+["Library/Fonts"]
+type = "archive"
+url = "https://github.com/vercel/geist-font/releases/download/1.1.0/Geist.Mono.zip"
+exact = true
+stripComponents = 1

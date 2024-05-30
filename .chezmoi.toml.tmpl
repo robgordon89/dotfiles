@@ -1,0 +1,11 @@
+{{- $useAGE := promptBoolOnce . "useAGE" "Do you want to use AGE" -}}
+
+{{- if $useAGE }}
+{{- $agefile := promptStringOnce . "agefile" "Age File Location" -}}
+{{- $agepublickey := promptStringOnce . "agepublickey" "Age Public key" -}}
+
+encryption = "age"
+[age]
+identity = {{ $agefile | quote }}
+recipient = {{ $agepublickey | quote }}
+{{ end }}

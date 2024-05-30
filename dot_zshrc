@@ -1,0 +1,133 @@
+# Set GPG TTY
+export GPG_TTY=$(tty)
+
+# Set default editor and visual editor
+export EDITOR="code --wait"
+export VISUAL="code"
+
+# Set XDG Config Home
+export XDG_CONFIG_HOME="$HOME/.config/"
+
+# Set Go Path
+export GOPATH="$HOME/go"
+
+# Set Homebrew prefix
+export HOMEBREW_PREFIX="/opt/homebrew"
+
+# Add Go bin to PATH
+export PATH="$PATH:$GOPATH/bin"
+
+# Add usr local bin to PATH
+export PATH="$PATH:/usr/local/bin"
+
+# Add Homebrew bin and sbin to PATH
+export PATH="$PATH:$HOMEBREW_PREFIX/bin"
+export PATH="$PATH:$HOMEBREW_PREFIX/sbin"
+
+# Add local bin to PATH
+export PATH="$PATH:$HOME/.local/bin"
+
+# Add composer to path
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
+# Add krew to PATH
+export PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
+
+# Path to dotfiles
+export DOTFILES="$HOME/.local/share/chezmoi"
+
+# source external deps
+source "${HOME}/.zsh-hooks/zsh-hooks.plugin.zsh"
+source "${HOME}/.zinit/zinit.zsh"
+
+## ZSH HOOKS
+# precmd_hook
+hooks-define-hook precmd_hook
+function precmd-wrapper { hooks-run-hook precmd_hook }
+add-zsh-hook precmd precmd-wrapper
+
+# preexec_hook
+hooks-define-hook preexec_hook
+function preexec-wrapper { hooks-run-hook preexec_hook "$@" }
+add-zsh-hook preexec preexec-wrapper
+
+# chpwd_hook
+hooks-define-hook chpwd_hook
+function chpwd-wrapper { hooks-run-hook chpwd_hook }
+add-zsh-hook chpwd chpwd-wrapper
+
+# Load Plugins
+
+# Syntax highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
+
+# autopair (parenthesis, brackets, quotes, etc..)
+AUTOPAIR_INHIBIT_INIT=1 # inhibit init, we'll call it later
+zinit light hlissner/zsh-autopair
+
+# Git branch in prompt (using fast gitstatusd daemon)
+zinit load romkatv/gitstatus
+gitstatus_start MY
+
+# Options
+source "$DOTFILES/zsh/rc/options.zsh"
+
+# Completion
+source "$DOTFILES/zsh/rc/completions.zsh"
+
+# Aliases
+source "$DOTFILES/zsh/rc/aliases_and_short_funcs.zsh"
+
+# Prompt
+source "$DOTFILES/zsh/rc/prompt.zsh"
+
+# Keybinds
+source "$DOTFILES/zsh/rc/mappings.zsh"
+
+# Terminal title
+source "$DOTFILES/zsh/rc/terminal_title.zsh"
+
+# Functions
+
+if [ "$ALACRITTY" = "true" ]
+then
+  local ALA_HOME=$HOME/.config/alacritty
+  local ALA_THEME=$(defaults read -g AppleInterfaceStyle 2>/dev/null || echo "Light")
+  local ALA_THEME=$(echo $ALA_THEME | tr '[:upper:]' '[:lower:]')
+  ln -sf $ALA_HOME/themes/themes/github_${ALA_THEME}_high_contrast.toml $ALA_HOME/active.toml
+fi
+
+# Switch terminal colors dark/light at runtime
+function switch-term-colors
+{
+  local color_mode=$(command switch-term-colors "$@")
+  if [[ "$color_mode" =~ "Usage" ]]; then
+    echo "$color_mode" # print error
+    return 1
+  else
+    export TERM_COLOR_MODE="$color_mode"
+  fi
+}
+
+#-------------------------------------------------------------
+# LATE INIT - initialize things that should be init last
+
+autopair-init
+
+if whence direnv >/dev/null; then
+    eval "$(direnv hook zsh)"
+fi
+
+source <(kubectl completion zsh)
+
+USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
+eval "$(/Users/$USER/.local/bin/mise activate zsh)"
+
+_include "$HOME/.cargo/env"
+_include "/usr/local/bin/google-cloud-sdk/path.zsh.inc"
+_include "/usr/local/bin/google-cloud-sdk/completion.zsh.inc"
+
+true # The config should always finish well!

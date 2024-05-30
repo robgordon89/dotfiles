@@ -1,0 +1,219 @@
+{
+    "php.suggest.basic": false,
+    /**
+    * Better Defaults
+    **/
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.emptySelectionClipboard": false,
+    "window.newWindowDimensions": "inherit",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "files.trimTrailingWhitespace": false,
+    "editor.snippetSuggestions": "top",
+    "editor.detectIndentation": false,
+    "window.nativeFullScreen": false,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "workbench.sideBar.location": "left",
+    "workbench.editor.showTabs": "multiple",
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "on",
+    "editor.folding": false,
+    "editor.minimap.renderCharacters": false,
+    "workbench.editor.showIcons": false,
+    "workbench.iconTheme": null,
+    "window.autoDetectColorScheme": true,
+
+    "editor.wordSeparators": "`~!@#$%^&*.()-=+[{]}\\|;:'\",<>/?",
+    /**
+    * Silence The Noise
+    */
+    "breadcrumbs.enabled": false,
+    "scm.diffDecorations": "all",
+    "editor.hover.enabled": true,
+    "editor.matchBrackets": "never",
+    "workbench.tips.enabled": false,
+    "editor.colorDecorators": false,
+    "git.decorations.enabled": true,
+    "workbench.startupEditor": "none",
+    "editor.lightbulb.enabled": "off",
+    "editor.selectionHighlight": false,
+    "editor.overviewRulerBorder": false,
+    "editor.renderLineHighlight": "none",
+    "editor.occurrencesHighlight": "off",
+    "problems.decorations.enabled": false,
+    "editor.renderControlCharacters": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.gotoLocation.multipleReferences": "goto",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    /**
+    * Find
+    **/
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+        // Hide everything in /vendor, except the "laravel" and "livewire" folder.
+        "**/vendor/{[^l],?[^ai]}*": true,
+        // Hide everything in /public, except "index.php"
+        "**/public/{[^i],?[^n]}*": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/_ide_helper.php": true,
+        "**/composer.lock": true,
+        "**/package-lock.json": true,
+        "storage": true,
+        ".phpunit.result.cache": true
+    },
+    /**
+    * Window Settings
+    **/
+    "window.titleBarStyle": "native",
+    "apc.electron": {
+        "titleBarStyle": "hiddenInset",
+        "trafficLightPosition": {
+            "x": 17,
+            "y": 12
+        },
+        // This gets rid of that horid white frame around the electron window...
+        "transparent": true,
+        // This removes the less-horid, but still yucky stacking window shadow...
+        "hasShadow": false
+    },
+    "editor.fontSize": 14,
+    "editor.lineHeight": 28,
+    "editor.fontFamily": "Geist Mono, monospace",
+    "terminal.integrated.fontFamily": "Geist Mono, monospace",
+    "terminal.integrated.fontSize": 14,
+    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+    "php-cs-fixer.lastDownload": 1715169674762,
+    "prettier.singleQuote": false,
+    "prettier.requireConfig": true,
+    "files.associations": {
+        "*.yaml": "yaml",
+        "**/templates/**/*.yaml": "helm",
+        "helm/**/*.yaml": "helm",
+        "**/helm/**/*.yaml": "helm",
+        "**/*helm/**/*.yaml": "helm",
+        "**/helm*/**/*.yaml": "helm"
+    },
+
+    // Editor Styling
+    "workbench.colorTheme": "Default High Contrast",
+    "workbench.preferredLightColorTheme": "Default High Contrast Light",
+    "workbench.preferredDarkColorTheme": "Default High Contrast",
+    "workbench.statusBar.visible": false,
+    "workbench.editor.enablePreview": false,
+
+    // "workbench.colorCustomizations": {
+    //     "[Default High Contrast]": {
+    //         "sideBarTitle.foreground": "#000000",
+    //         "list.focusOutline": "#ff0000",
+    //         "contrastActiveBorder": "#ff0000",
+    //         "contrastBorder": "#cccccc",
+    //         "focusBorder": "#000000",
+    //     }
+    // },
+
+    /**
+    * Helm
+    **/
+    "[helm]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true
+    },
+    /**
+    * Yaml
+    **/
+    "[yaml]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.formatOnSave": true
+    },
+    /**
+    * Json
+    **/
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    /**
+    * markdown
+    **/
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    /**
+    * PHP CS Fixer
+    **/
+    "[php]": {
+        "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    },
+    /**
+    * javascript
+    **/
+    "[javascript]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.formatOnSave": true
+    },
+    /** 
+    * terraform
+     **/
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.formatOnSave": true
+    },
+    /** 
+    * typescript
+     **/
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true
+    },
+    "terminal.explorerKind": "external",
+    "terminal.integrated.cursorBlinking": true,
+    "yaml.customTags": [
+        "!encrypted/pkcs1-oaep scalar",
+        "!vault scalar"
+    ],
+    "editor.accessibilitySupport": "off",
+    "vs-kubernetes": {
+        "vscode-kubernetes.helm-path.mac": "/usr/local/bin/kubectl",
+        "vs-kubernetes.crd-code-completion": "disabled"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "go.toolsManagement.autoUpdate": true,
+    "go.alternateTools": {
+        "go": "/Users/robert/.local/share/rtx/shims/go"
+    },
+    "redhat.telemetry.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.guides.indentation": false,
+    "terraform.languageServer.enable": true,
+    "terraform.languageServer.path": "",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "codeQL.telemetry.enableTelemetry": false,
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "python.experiments.enabled": false,
+    "cSpell.userWords": [
+        "mailercheck",
+        "mailerlite",
+        "mailersend"
+    ],
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "window.commandCenter" : false,
+    "workbench.layoutControl.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "workbench.activityBar.location": "hidden",
+    "github.copilot.editor.enableAutoCompletions": true
+}
