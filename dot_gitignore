@@ -3,11 +3,3 @@
 .mise.toml
 .DS_Store
 .idea/
-/staging-old.yaml
-/branch-old.yaml
-/dev-old.yaml
-/prod-old.yaml
-/branch.yaml
-/dev.yaml
-/prod.yaml
-/staging.yaml
