@@ -103,7 +103,6 @@ packages:
       - "opentofu"
       - "operator-sdk"
       - "pango"
-      - "pulumi"
       - "ripgrep"
       - "restic"
       - "sops"
