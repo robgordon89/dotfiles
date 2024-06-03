@@ -141,3 +141,4 @@ packages:
       - "visual-studio-code"
     mas:
       - '"1password For Safari", id: 1569813296'
+      - '"tailscale", id: 1475387142'
