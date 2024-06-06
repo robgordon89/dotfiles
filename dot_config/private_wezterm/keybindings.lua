@@ -2,6 +2,7 @@ local wezterm = require 'wezterm'
 local act = wezterm.action
 
 return {
+    leader = { mods = 'CTRL', key = 'a', timeout_milliseconds = 1000 },
     keys = {
         {
             key = 'r',

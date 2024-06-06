@@ -137,6 +137,7 @@ packages:
       - "macs-fan-control"
       - "orbstack"
       - "slack"
+      - "raycast"
       - "tailscale"
       - "visual-studio-code"
     mas:
