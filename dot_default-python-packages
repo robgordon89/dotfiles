@@ -1,5 +1,4 @@
 ansible
 pipenv
 virtualenv
-poetry
 pre-commit

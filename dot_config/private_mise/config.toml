@@ -1,6 +1,7 @@
 [tools]
 go = '1.21'
 python = '3.12'
+poetry = 'latest'
 node = '21.2.0'
 java = '17.0.0'
 php = "system"

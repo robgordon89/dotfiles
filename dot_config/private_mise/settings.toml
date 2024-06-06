@@ -1,2 +1,3 @@
 legacy_version_file = false
-experimental = false
+experimental = true
+python_venv_auto_create = true
