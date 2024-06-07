@@ -199,6 +199,7 @@
         "editor.defaultFormatter": "vscode.html-language-features"
     },
     "codeQL.telemetry.enableTelemetry": false,
+    "codeQL.githubDatabase.download": "never",
     "[python]": {
         "editor.formatOnType": true,
         "editor.defaultFormatter": "ms-python.black-formatter"
