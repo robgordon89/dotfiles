@@ -2,7 +2,7 @@
 export GPG_TTY=$(tty)
 
 # Set default editor and visual editor
-export EDITOR="code --wait"
+export EDITOR="vi"
 export VISUAL="code"
 
 # Set XDG Config Home
