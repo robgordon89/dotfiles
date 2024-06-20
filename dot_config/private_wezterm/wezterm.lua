@@ -40,6 +40,7 @@ local cfg_misc = {
   inactive_pane_hsb = {
     brightness = 0.6,
   },
+  front_end = "WebGpu",
 }
 
 local cfg_fonts = require("cfg_fonts")
