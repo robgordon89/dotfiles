@@ -117,6 +117,15 @@
     // },
 
     /**
+    * nix
+    **/
+    "[nix]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true
+    },
+
+    /**
     * Helm
     **/
     "[helm]": {
