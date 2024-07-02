@@ -124,7 +124,6 @@ USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
-eval "$(/Users/$USER/.local/bin/mise activate zsh)"
 
 _include "$HOME/.cargo/env"
 _include "/usr/local/bin/google-cloud-sdk/path.zsh.inc"

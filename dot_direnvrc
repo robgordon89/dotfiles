@@ -1,7 +1,3 @@
-use_mise() {
-  direnv_load mise direnv exec
-}
-
 layout_poetry() {
     PYPROJECT_TOML="${PYPROJECT_TOML:-pyproject.toml}"
     if [[ ! -f "$PYPROJECT_TOML" ]]; then

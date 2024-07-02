@@ -188,7 +188,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "go.toolsManagement.autoUpdate": true,
     "go.alternateTools": {
-        "go": "/Users/robert/.local/share/mise/shims/go"
+        "go": "/run/current-system/sw/bin/go"
     },
     "redhat.telemetry.enabled": false,
     "editor.renderWhitespace": "all",
