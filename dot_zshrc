@@ -33,6 +33,9 @@ export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 # Add krew to PATH
 export PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
 
+# Add vscode to PATH
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # Path to dotfiles
 export DOTFILES="$HOME/.local/share/chezmoi"
 

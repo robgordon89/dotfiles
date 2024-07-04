@@ -17,7 +17,8 @@ alias vi=nvim
 alias v=nvim
 alias d=docker
 alias k=kubectl
-alias tf=terraform
+alias terraform=tofu
+alias tf=tofu
 alias kx=kubectx
 alias t=tmux
 
