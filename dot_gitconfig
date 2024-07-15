@@ -1,7 +1,7 @@
 [user]
     name = Robert Gordon
     email = rob@ruled.io
-    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINqQ7zQx6oUg5tYfgh1OBuqHS8NkUefuhBNXDTACiv4l rob@ruled.io
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEJOD+xGS8a9Q2Dyyah+jH6caM2n4XaJNKRvmbo7NqaY
 [init]
     defaultBranch = main
 [pull]
